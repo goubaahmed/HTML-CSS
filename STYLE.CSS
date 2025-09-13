@@ -1,0 +1,411 @@
+
+*{
+ margin: 0; 
+ padding: 0; 
+ box-sizing: border-box; 
+font-family: Poppins, sans-serif;
+list-style: none;
+text-decoration: none;
+}
+.body {
+background:linear-gradient(#111, #222) ;
+font-family: "quicksand", sans-serif;
+width: 100%;
+height: 100vh;
+}
+/* header start */
+#navbar{
+display: flex;
+justify-content: space-between;
+overflow: hidden;
+align-items: center;
+background-color: #111;
+border-radius: 50px;
+margin: 0 10px;
+z-index: 4;
+}
+#navbar img{
+width: 80px;
+margin-left:80px ;
+}
+#navbar ul{
+display: flex;
+overflow: hidden;
+margin-right:20px;
+}
+#navbar ul li a{
+padding:  10px;    
+margin: 0 10px;
+overflow: hidden;
+color: #fff;
+font-weight: 600;
+font-size: 14px;
+}#navbar ul li a:hover{
+position: relative;
+color: #b65a04;
+transition: 0.3s ease;
+bottom: 2px;
+}
+/* header end */.imge img {
+position: relative;
+width: 40%;
+height: 65vh;
+overflow: hidden;
+display: block;
+margin-left: auto;
+margin-right: auto;
+z-index:2;
+transition: 0.3s ease;
+}
+.imge h1 {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: rgb(255, 255, 255);
+font-size: 8rem;
+font-family: "Comic Sans MS", "Comic Neue", cursive;
+text-align: center;
+white-space: nowrap;
+z-index:1;
+transition: 0.3s ease;
+}
+.imge::after {
+content: "";
+position: absolute;
+bottom: 35px;
+left: 50%;
+transform: translateX(-50%);
+width: 35%;
+height: 40px;
+background: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, transparent 80%);
+border-radius: 50%;
+}
+/* ✨ لما اعمل hover على الصورة */
+.imge img:hover {
+opacity: 0.3;
+}
+/* ✨ نفس التأثير لما اعمل hover على التكست أو الصورة */
+.imge img:hover + h1,
+.imge h1:hover {
+color: gold;
+text-shadow: 0 0 20px gold, 0 0 40px orange, 0 0 60px red;
+}
+#navbar img:hover {
+transform: scale(1.1);
+transition: 0.3s ease;
+}
+/* meal start */
+/* container العام // ====== Chicken Meals Section ====== */
+#chicken-meals {
+  position: relative;
+  background: #1b1b1b;
+  padding: 60px;
+  color: #fff;
+  margin-top: 160px;
+}
+#chicken-meals #titel {
+  text-align: center;
+  margin-bottom: 40px;
+}
+#chicken-meals #titel h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#chicken-meals #titel p {
+  font-size: 16px;
+  color: #ddd;
+}
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 60px 20px;
+}
+/* ====== Meals Grid ====== */
+#meals {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+gap: 20px;
+}
+/* ====== Meal Card Style ====== */
+.meals-item {
+background: #fff;
+border-radius: 12px;
+box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+overflow: hidden;
+text-align: center;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+color: #000;
+width: 100%;
+max-width: 280px;
+margin: 15px auto; /* يتوسّط الكارد جوه العمود */
+}
+.meals-item:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.meals-item img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+.meals-item h3 {
+font-size: 18px;
+margin: 10px 0;
+}
+.meals-item p {
+font-size: 14px;
+color: #555;
+margin-bottom: 15px;
+}
+.primary-text {
+color: #e63946; /* لون السعر */
+font-weight: bold;
+}
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  margin: 10px 0;
+}
+.order-btn {
+  background-color: #ff5722;
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.order-btn:hover {
+  background-color: #e64a19;
+}
+/* offers start */
+#offers {
+  padding: 30px 0;
+  height: 80vh;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  background: url("./img/offer-background.jpg") center center/cover fixed;
+}
+#offers h2 {
+  color: #ffe600; 
+}
+#offers .titel {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#offers .titel p {
+  color: #fff;
+  font-weight: 500;
+}
+#offers .offers-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center ;
+  color: #fff;
+}
+#offers .offers-items img{
+  width: 200px;
+
+}
+#offers .offers-items img:hover{
+  transform: scale(1.1);
+  transition: 0.3s ease;
+  
+}
+#offers .offers-items h3{
+  font-size: 25px;
+  margin: 15px 0;
+}
+#offers .offers-items p{
+  font-size: 14px;
+  padding: 0 20px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+#offers .offers-items span{
+  font-size: 18px;
+  font-weight:600;
+  margin-left: 5px;
+}
+/* offers end */
+/* ABOUT START */
+.container3{
+  background-color: #ffffff;
+  max-width:1100px;
+  margin: auto;
+}
+  #About{
+    height:100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fcfcfc;
+  }
+  #About .title{
+    text-align: center;
+    margin-bottom: 4rem;
+
+  }
+  #About h2{
+    font-size: 40px;
+    color: #383848;
+    margin-bottom: 20px;
+  }
+  #About .title p{
+     font-size: 14px;
+     color: #9a9a9a;
+     font-weight: 600;
+  }
+  #About .about-content{
+    display: flex;
+    justify-content: space-between;
+  }
+   #About .about-content img{
+    width: 450px;
+   }
+   #About .about-content p{
+    color: #9a9a9a;
+    margin-right: 7rem;
+    font-weight: 500;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+   }
+   .btn-secondary{
+    padding: 15px 25px;
+    color: white;
+    background-color: #383848;
+    border-radius: 30px;
+   }
+   .btn-secondary:hover{
+    transition: calc(1s);
+    font-size: 14px;font-weight: 600;
+    color: black;
+    background-color: rgb(214, 176, 6);
+   }
+/* ABOUT END */
+/* side item start */
+#sideitem {
+  position: relative;
+  background: url("./img/daytime_bg.jpeg") center center/cover fixed no-repeat;
+  padding: 60px;
+  height: 50vh;
+  color: #fff;
+  text-align: center;
+}
+#sideitem .sideitem-items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 40vh;
+}
+#sideitem .sideitem-items img {
+  position: relative;
+  bottom: 130px;
+  left:50px;
+}
+#sideitem .sideitem-items h3 {
+  position: relative;
+  right:30px ;
+  bottom: 55px;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+#sideitem .sideitem-items p {
+  position: relative;
+  right:30px ;
+  bottom: 115px;
+  font-size: 16px;
+  color: #800404;
+  max-width: 300px;
+  margin: auto;
+}
+/* side item end */
+/* contact start */
+#contact {
+  padding: 10px 0;
+  background-color: #f4f4f4;
+}
+#contact .container{
+  max-width: 1000px;
+}
+#contact .contact-content{
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+}
+#contact .contact-content .contact-info{ 
+position: relative;
+  width: 50%;
+  right: 230PX;
+}
+#contact .contact-content .contact-info div{
+  margin: 30px 0;
+  line-height: 1.5;
+}
+#contact .contact-content .contact-info h3{
+  font-size: 28px;
+  color: #383848;
+  margin-bottom:10px ;
+} 
+#contact .contact-content .contact-info p{
+  color: #525050;
+
+}
+#contact .contact-content .contact-info i{
+  color: #e4b95b;
+  margin-right: 5px;
+}
+#contact .contact-content .contact-info a i{
+color: white;
+background-color: #383848;
+border-radius: 50%;
+text-align: center;
+padding: 10PX 26.4PX 10PX 10PX;
+font-size: 17px;
+}
+#contact .contact-content .contact-info a i:hover{
+  background-color: #071e85;
+  transform: scale(1.1);
+  transition: 0.3s ease;
+}
+form{
+  position: relative;
+  width: 80%;
+  left: 530PX;
+  bottom: 420px;
+  display: flex;
+  flex-direction: column;
+}
+form input,
+textarea{
+  display: block;
+  width: 100%;
+  padding: 20px 15px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #e3e2dd;
+
+}
+
+#contact .btn{
+    padding: 10px 25px;
+    width: 42%;
+    color: white;
+    background-color: #383848;
+    border-radius: 30px;
+}
+#contact .btn:hover{
+    transition: calc(1s);
+    color: black;
+    background-color: rgb(214, 176, 6);
+    
+   }
+   
+/* contact end */
